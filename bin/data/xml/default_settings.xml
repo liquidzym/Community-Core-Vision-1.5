@@ -1,0 +1,178 @@
+<CAMERAS>
+    <CAMERA>
+        <SETTINGS>
+            <TYPE>PS3</TYPE>
+            <FRAME>
+                <WIDTH>320</WIDTH>
+                <HEIGHT>240</HEIGHT>
+                <LEFT>0</LEFT>
+                <TOP>0</TOP>
+		<!-- Always 0 for this type of camera -->
+		<RAW>0</RAW>
+            </FRAME>
+            <SENSOR>
+		<!-- 
+		0 - for non-preprocessed frame. (Less settings and high perfomance)
+		1 - for preprocesses frame. (More settings and lower perfomance)
+		-->
+                <MODE>0</MODE>
+		<!--
+		1 - for Grayscale image
+		3 - for RGB image
+		-->
+                <DEPTH>1</DEPTH>
+                <GAIN>
+			<AUTO>0</AUTO>			
+			<VALUE>16</VALUE>
+		</GAIN>
+                <EXPOSURE>
+			<AUTO>0</AUTO>
+			<VALUE>100</VALUE>	
+		</EXPOSURE>
+		<!--
+		Set framerate carefully -you need to have 
+		a high perfomance PC formulticamera setups 
+		with a lot of USB 2.0 (better USB 3.0) controller
+		-->
+                <FRAMERATE>60</FRAMERATE>
+            </SENSOR>
+        </SETTINGS>
+    </CAMERA>
+    <CAMERA>
+        <SETTINGS>
+            <TYPE>DIRECTSHOW</TYPE>
+            <FRAME>
+                <WIDTH>320</WIDTH>
+                <HEIGHT>240</HEIGHT>
+                <LEFT>0</LEFT>
+                <TOP>0</TOP>
+		<!-- Always 0 for this type of camera -->
+		<RAW>0</RAW>
+            </FRAME>
+            <SENSOR>
+            	<MODE>0</MODE>
+                <DEPTH>3</DEPTH>
+                <FRAMERATE>15</FRAMERATE>
+         </SENSOR>
+	    <!-- 
+		Common settings are not setted here
+		because every DIRECTSHOW camera has unique set of
+		supported settings
+		-->
+        </SETTINGS>
+    </CAMERA>
+    <CAMERA>
+        <SETTINGS>
+            <TYPE>FFMV</TYPE>
+            <FRAME>
+                <WIDTH>640</WIDTH>
+                <HEIGHT>480</HEIGHT>
+                <LEFT>0</LEFT>
+                <TOP>0</TOP>
+		<!-- Always 0 for this type of camera -->
+		<RAW>0</RAW>
+            </FRAME>
+            <SENSOR>
+		<!--
+		0 - for normal capturing
+		1 - for binding 2x2
+		2 - for binding 2x1
+		-->
+            	<MODE>0</MODE>
+                <DEPTH>1</DEPTH>
+		<!-- All setting in absolute mode -->
+                <FRAMERATE>1063</FRAMERATE>
+		<BRIGHTNESS>
+			<AUTO>0</AUTO>
+			<VALUE>34</VALUE>
+		</BRIGHTNESS>
+		<EXPOSURE>
+			<AUTO>0</AUTO>
+			<VALUE>40</VALUE>
+		</EXPOSURE>
+		<GAIN>
+			<AUTO>0</AUTO>
+			<VALUE>64</VALUE>
+		</GAIN>
+		<GAMMA>
+			<AUTO>0</AUTO>
+			<VALUE>1</VALUE>
+		</GAMMA>
+		<SHUTTER>
+			<AUTO>0</AUTO>
+			<VALUE>867</VALUE>
+		</SHUTTER>
+            </SENSOR>
+        </SETTINGS>
+    </CAMERA>
+    <CAMERA>
+        <SETTINGS>
+            <TYPE>CMU</TYPE>
+            <FRAME>
+                <WIDTH>320</WIDTH>
+                <HEIGHT>240</HEIGHT>
+                <LEFT>0</LEFT>
+                <TOP>0</TOP>
+		<!-- 
+		0 - for non-RAW capturing
+		1 - for RRGB mapping 
+		2 - for GRBG mapping
+		3 - for GBRG mapping
+		4 - for BGGR mapping
+		-->
+		<RAW>0</RAW>
+            </FRAME>
+            <SENSOR>
+		<!--
+		0 - 160x120 YUV (4:4:4)
+		1 - 320x240 YUV (4:2:2)
+		2 - 640x480 YUV (4:1:1)
+		3 - 640x480 YUV (4:2:2)
+		4 - 640x480 RGB
+		5 - 640x480 MONO (8-bit)
+		6 - 640x480 MONO (16-bit)
+		7 - 800x600 YUV (4:2:2)
+		8 - 800x600 RGB
+		9 - 800x600 MONO (8-bit)
+		10 - 800x600 MONO (16-bit)
+		11 - 1024x768 YUV (4:2:2)
+		12 - 1024x768 RGB
+		13 - 1024x768 MONO (8-bit)
+		14 - 1024x768 MONO (16-bit)
+		15 - 1280x960 YUV (4:2:2)
+		16 - 1280x960 RGB
+		17 - 1280x960 MONO (8-bit)
+		18 - 1280x960 MONO (16-bit)
+		19 - 1600x1200 YUV (4:2:2)
+		20 - 1600x1200 RGB
+		21 - 1600x1200 MONO (8-bit)
+		22 - 1600x1200 MONO (16-bit)
+		-->
+            	<MODE>5</MODE>
+                <DEPTH>3</DEPTH>
+                <FRAMERATE>15</FRAMERATE>
+            </SENSOR>
+        </SETTINGS>
+    </CAMERA>
+    <CAMERA>
+        <SETTINGS>
+            <TYPE>KINECT</TYPE>
+            <FRAME>
+                <WIDTH>640</WIDTH>
+                <HEIGHT>480</HEIGHT>
+                <LEFT>0</LEFT>
+                <TOP>0</TOP>
+		<RAW>0</RAW>
+            </FRAME>
+            <SENSOR>
+            	<MODE>1</MODE>
+                <DEPTH>1</DEPTH>
+                <FRAMERATE>30</FRAMERATE>
+		<DEPTHNEARBOUND>0</DEPTHNEARBOUND>
+		<DEPTHFARBOUND>65535</DEPTHFARBOUND>
+		<MOTORLED>0</MOTORLED>
+		<MOTORPOSITION>0</MOTORPOSITION>
+            </SENSOR>
+        </SETTINGS>
+    </CAMERA>
+</CAMERAS>
