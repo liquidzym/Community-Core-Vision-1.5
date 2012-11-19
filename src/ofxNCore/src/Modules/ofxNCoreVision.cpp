@@ -627,7 +627,7 @@ void ofxNCoreVision::_draw(ofEventArgs &e)
 void ofxNCoreVision::drawFullMode()
 {
 	ofBackground(255, 255, 255);
-	ofSetColor(0xFFFFFF);
+	ofSetHexColor(0xFFFFFF);
 	//Draw Background Image
 	background.draw(0,0);
 
@@ -643,7 +643,7 @@ void ofxNCoreVision::drawFullMode()
 				filter_fiducial->draw();
 		}
 
-		ofSetColor(0xFFFFFF);
+		ofSetHexColor(0xFFFFFF);
 		string str1 = "Mode: Camera\n";
 		string str2 = "Size: ";
 		str2+= ofToString(camWidth, 0) + "x" + ofToString(camHeight, 0)  + "\n";
@@ -676,7 +676,7 @@ void ofxNCoreVision::drawFullMode()
 			str8+= ofToString(tWidth,0)+"x"+ofToString(tHeight,0)+"\n";
 		}
 		
-		ofSetColor(0x555555);
+		ofSetHexColor(0x555555);
 		verdana.drawString(  str3 + str4+str4a+str6 + str1 +  str2 + "\n\n\n" + str7 + str8 , DEBUG_TEXT_OFFSET_X1, DEBUG_TEXT_OFFSET_Y1);
 
 		// REMOVED + str5 
@@ -707,7 +707,7 @@ void ofxNCoreVision::drawFullMode()
 		}
 
 
-		ofSetColor(0x555555);
+		ofSetHexColor(0x555555);
 		verdana.drawString(buf, DEBUG_TEXT_OFFSET_X2, DEBUG_TEXT_OFFSET_Y2);
 	}
 	/*
@@ -759,9 +759,9 @@ void ofxNCoreVision::drawMiniMode()
 	verdana.drawString("Communication:  " ,10, ofGetHeight() - 9 );
 	//draw green tuio circle
 	if((myTUIO.bIsConnected || myTUIO.bOSCMode) && bTUIOMode)
-		ofSetColor(0x00FF00);	//green = connected
+		ofSetHexColor(0x00FF00);	//green = connected
 	else
-		ofSetColor(0xFF0000);	//red = not connected
+		ofSetHexColor(0xFF0000);	//red = not connected
 	ofFill();
 	ofCircle(ofGetWidth() - 17 , ofGetHeight() - 10, 5);
 	ofNoFill();
@@ -784,7 +784,7 @@ void ofxNCoreVision::drawFingerOutlines()
 				float xpos = contourFinder.blobs[i].centroid.x * (326.0f/camWidth);
 				float ypos = contourFinder.blobs[i].centroid.y * (246.0f/camHeight);
 
-				ofSetColor(0xCCFFCC);
+				ofSetHexColor(0xCCFFCC);
 				char idStr[1024];
 
 				sprintf(idStr, "id: %i", contourFinder.blobs[i].id);
@@ -808,7 +808,7 @@ void ofxNCoreVision::drawFingerOutlines()
 				float xpos = contourFinder.objects[i].centroid.x * (326.0f/camWidth);
 				float ypos = contourFinder.objects[i].centroid.y * (246.0f/camHeight);
 
-				ofSetColor(0xCCFFCC);
+				ofSetHexColor(0xCCFFCC);
 				char idStr[1024];
 
 				sprintf(idStr, "id: %i", contourFinder.objects[i].id);
@@ -819,7 +819,7 @@ void ofxNCoreVision::drawFingerOutlines()
 	}
 
 
-	ofSetColor(0xFFFFFF);
+	ofSetHexColor(0xFFFFFF);
 }
 
 void ofxNCoreVision::drawFiducials()
